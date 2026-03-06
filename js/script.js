@@ -53,12 +53,12 @@
                          `📝 *Obs/Alergias:* ${obs}%0A%0A` +
                          `_Gostaria de saber mais sobre a consultoria!_`;
             
-            window.open(`https://wa.me/SEU_NUMERO?text=${text}`, '_blank');
+            window.open(`https://wa.me/554999695903?text=${text}`, '_blank');
         }
 
         function escolherPlano(plano) {
             const text = `Olá Maieli! Tenho interesse no plano *${plano}*.`;
-            window.open(`https://wa.me/SEU_NUMERO?text=${text}`, '_blank');
+            window.open(`https://wa.me/554999695903?text=${text}`, '_blank');
         }
 
         // --- COMPARTILHAMENTO JS ---
