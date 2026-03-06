@@ -62,16 +62,20 @@
         }
 
         // --- COMPARTILHAMENTO JS ---
-        function toggleShareModal() {
-            const modal = document.getElementById('shareModal');
-            modal.classList.toggle('active');
+        function toggleShareDropdown() {
+            const container = document.querySelector('.share-container');
+            container.classList.toggle('active');
+            const btn = document.querySelector('.share-toggle');
+            btn.classList.toggle('active');
         }
 
-        // Fecha o modal ao clicar fora dele
+        // Fecha o dropdown ao clicar fora dele
         window.addEventListener('click', (e) => {
-            const modal = document.getElementById('shareModal');
-            if(e.target === modal) {
-                toggleShareModal();
+            const container = document.querySelector('.share-container');
+            if(container && container.classList.contains('active') && !container.contains(e.target)) {
+                container.classList.remove('active');
+                const btn = document.querySelector('.share-toggle');
+                if(btn) btn.classList.remove('active');
             }
         });
 

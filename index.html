@@ -45,8 +45,21 @@
 <body>
 
     <main class="glass-card">
-        <!-- New Share Button -->
-        <button class="share-toggle" onclick="toggleShareModal()" aria-label="Compartilhar Página"><i class="fas fa-share-alt"></i></button>
+        <!-- New Share Button Dropdown -->
+        <div class="share-container">
+            <button class="share-toggle" onclick="toggleShareDropdown()" aria-label="Compartilhar Página"><i class="fas fa-share-alt"></i></button>
+            <div id="shareDropdown" class="share-dropdown">
+                <div class="share-options">
+                    <button onclick="shareSocial('whatsapp')" class="share-btn whatsapp" aria-label="Compartilhar no WhatsApp"><i class="fab fa-whatsapp"></i></button>
+                    <button onclick="shareSocial('facebook')" class="share-btn facebook" aria-label="Compartilhar no Facebook"><i class="fab fa-facebook-f"></i></button>
+                    <button onclick="shareSocial('twitter')" class="share-btn twitter" aria-label="Compartilhar no Twitter"><i class="fab fa-twitter"></i></button>
+                    <button onclick="shareSocial('instagram')" class="share-btn instagram" aria-label="Compartilhar no Instagram (Copia o link)"><i class="fab fa-instagram"></i></button>
+                    <button onclick="shareSocial('tiktok')" class="share-btn tiktok" aria-label="Compartilhar no TikTok (Copia o link)"><i class="fab fa-tiktok"></i></button>
+                    <button onclick="shareSocial('copy')" class="share-btn copy-link" aria-label="Copiar Link"><i class="fas fa-link"></i></button>
+                </div>
+                <p id="copyFeedback" class="copy-feedback">Link copiado!</p>
+            </div>
+        </div>
 
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Alternar Tema Escuro/Claro"><i class="fas fa-sun"></i></button>
 
@@ -334,22 +347,7 @@
         </footer>
     </main>
 
-    <!-- Modal de Compartilhamento -->
-    <div id="shareModal" class="modal-overlay">
-        <div class="share-modal glass-card">
-            <button class="close-modal" onclick="toggleShareModal()" aria-label="Fechar"><i class="fas fa-times"></i></button>
-            <h3 class="modal-title">Compartilhar</h3>
-            <div class="share-options">
-                <button onclick="shareSocial('whatsapp')" class="share-btn whatsapp" aria-label="Compartilhar no WhatsApp"><i class="fab fa-whatsapp"></i></button>
-                <button onclick="shareSocial('facebook')" class="share-btn facebook" aria-label="Compartilhar no Facebook"><i class="fab fa-facebook-f"></i></button>
-                <button onclick="shareSocial('twitter')" class="share-btn twitter" aria-label="Compartilhar no Twitter"><i class="fab fa-twitter"></i></button>
-                <button onclick="shareSocial('instagram')" class="share-btn instagram" aria-label="Compartilhar no Instagram (Copia o link)"><i class="fab fa-instagram"></i></button>
-                <button onclick="shareSocial('tiktok')" class="share-btn tiktok" aria-label="Compartilhar no TikTok (Copia o link)"><i class="fab fa-tiktok"></i></button>
-                <button onclick="shareSocial('copy')" class="share-btn copy-link" aria-label="Copiar Link"><i class="fas fa-link"></i></button>
-            </div>
-            <p id="copyFeedback" class="copy-feedback">Link copiado!</p>
-        </div>
-    </div>
+    <!-- Scripts -->
 
 <script src="./js/script.js"></script>
 </body>
